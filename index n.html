@@ -290,7 +290,7 @@
   }
 
   async function init() {
-    const scriptConfigurado = APPS_SCRIPT_URL && APPS_SCRIPT_URL !== "PEGA_AQUI_TU_URL_DE_APPS_SCRIPT";
+    const scriptConfigurado = APPS_SCRIPT_URL && APPS_SCRIPT_URL !== "https://script.google.com/macros/s/AKfycbyxcLPlshtzjhncWvvwISMWtVhj4BI9WGgACFBnlplL8r98YfBjI1T8BU79hVse1rBy4w/exec";
 
     if (scriptConfigurado) {
       const data = await jsonp(`${APPS_SCRIPT_URL}?action=checkActive&auto=${encodeURIComponent(AUTO)}`);
