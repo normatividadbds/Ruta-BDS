@@ -290,7 +290,7 @@
   }
 
   async function init() {
-    const scriptConfigurado = APPS_SCRIPT_URL && APPS_SCRIPT_URL !== "https://script.google.com/macros/s/AKfycbyEImcssq3Smjm7wd5W0kiqXcZQSYkJXj9KBVV5bE3IieX9c8ZZynKUG3kWTAv_NvfUFw/exec";
+    const scriptConfigurado = true;
 
     if (scriptConfigurado) {
       const data = await jsonp(`${APPS_SCRIPT_URL}?action=checkActive&auto=${encodeURIComponent(AUTO)}`);
@@ -316,7 +316,7 @@
 
     now = new Date();
 
-    const scriptSinConfigurar = !APPS_SCRIPT_URL || APPS_SCRIPT_URL === "https://script.google.com/macros/s/AKfycbyEImcssq3Smjm7wd5W0kiqXcZQSYkJXj9KBVV5bE3IieX9c8ZZynKUG3kWTAv_NvfUFw/exec";
+    const scriptSinConfigurar = false;
 
     if (tipoRegistro === "salida") {
       badge.innerHTML = `<div class="car-badge badge-salida">🚗 ${AUTO}</div>`;
