@@ -259,13 +259,6 @@
 
   const params = new URLSearchParams(window.location.search);
 const AUTO = params.get("auto") || "UNIDAD-??";
-const t = params.get("t");
-const ahora = Date.now();
-if (!t || (ahora - parseInt(t)) > 30000) {
-  const url = new URL(window.location.href);
-  url.searchParams.set("t", ahora);
-  window.location.replace(url.toString());
-}
 
   let tipoRegistro = "salida";   // se determina según si hay viaje activo
   let viajeActivo = null;        // datos del viaje activo si existe
