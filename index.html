@@ -256,7 +256,10 @@
   // ─────────────────────────────────────────────────────────────────
 
   const params = new URLSearchParams(window.location.search);
-  const AUTO = params.get("auto") || "UNIDAD-??";
+const AUTO = params.get("auto") || "UNIDAD-??";
+if (!params.get("t")) {
+  window.location.replace(window.location.href + "&t=" + Date.now());
+}
 
   let tipoRegistro = "salida";   // se determina según si hay viaje activo
   let viajeActivo = null;        // datos del viaje activo si existe
