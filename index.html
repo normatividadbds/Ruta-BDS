@@ -259,6 +259,7 @@
 
   const params = new URLSearchParams(window.location.search);
 const AUTO = params.get("auto") || "UNIDAD-??";
+  if (params.get("reload")) { const u = new URL(location.href); u.searchParams.delete("reload"); u.searchParams.set("r", Date.now()); location.replace(u); }
 
   let tipoRegistro = "salida";   // se determina según si hay viaje activo
   let viajeActivo = null;        // datos del viaje activo si existe
